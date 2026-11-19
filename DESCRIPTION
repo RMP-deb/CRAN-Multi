@@ -1,0 +1,29 @@
+Package: pkgname
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre", "cph"))
+Description: What the package does (one paragraph). Write in full
+    sentences, do not start with the package name or "This package", and
+    quote software names in single quotes like 'R'.
+License: GPL (>= 3)
+URL: https://github.com/USERNAME/pkgname
+BugReports: https://github.com/USERNAME/pkgname/issues
+Depends: 
+    R (>= 4.2)
+Imports: 
+    Rcpp
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+LinkingTo: 
+    Rcpp
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.1
+Config/rextendr/version: 0.5.0
+SystemRequirements: Cargo (Rust's package manager), rustc >= 1.65.0, xz

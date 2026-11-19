@@ -1,0 +1,12 @@
+.Rproj.user
+inst/doc
+docs
+.Rhistory
+.RData
+.Ruserdata
+*.tar.gz
+*.Rcheck/
+.DS_Store
+src/rust/vendor
+src/Makevars
+src/Makevars.win
