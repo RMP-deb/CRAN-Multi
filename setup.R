@@ -7,8 +7,9 @@
 #
 # It deletes the files for the languages you didn't pick, replaces every
 # "pkgname" placeholder (file contents and file names) with your package
-# name, then deletes itself. Edit the remaining placeholders (First Last,
-# email, USERNAME, Title, Description) by hand. See SETUP.md.
+# name, then deletes itself and the template's README.md. Edit the
+# remaining placeholders (First Last, email, USERNAME, Title, Description)
+# by hand. See SETUP.md.
 
 args <- commandArgs(trailingOnly = TRUE)
 flags <- args[startsWith(args, "--")]
@@ -47,6 +48,10 @@ edit_text <- function(file, from, to) {
   txt <- paste(readLines(file, warn = FALSE), collapse = "\n")
   writeLines(gsub(from, to, txt, fixed = TRUE), file)
 }
+
+# README.md explains the template itself; the package's README comes from
+# README.Rmd (render it with devtools::build_readme()).
+unlink("README.md")
 
 # Strip languages that weren't requested --------------------------------------
 
